@@ -1,0 +1,48 @@
+﻿<Window x:Class="http_get.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:http_get"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.495,0.498">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label> Адрес вэб страницы </Label>
+        
+        <Border  Grid.Row="0"
+                 BorderThickness="1"
+                 Height="60"
+                 Width="750"
+                 Margin="0,10,0,0"
+                 >
+            <TextBox x:Name="Adress" 
+                   Height="60"
+                   Width="750"
+                   > </TextBox>
+        </Border>
+
+        <Label Grid.Row="1">Код ответа</Label>
+        <Label Grid.Row="1" Name="Kod" Margin="74,0,-74,0">none</Label>
+
+
+        <TextBox Grid.Row="1"
+                   Height="200"
+                   TextWrapping="Wrap"
+                   Name="BodyOf"
+                   >
+        </TextBox>
+
+        <Button Grid.Row="2"
+                Name="button"
+                Width="200"
+                Click="button_Click"
+                > Сделать выгрузку </Button>
+        
+
+    </Grid>
+</Window>
